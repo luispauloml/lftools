@@ -38,7 +38,7 @@ Faculade de Engenharia de Ilha Solteira da Universidade Estadual Paulista
 "Júlio de Mesquita Filho", onde ele tem sido desenvolvido.
 
 ## Instalação
-Baixe o repositório e adicione o caminho até `/src/` usando `addpath` na 
+Baixe o repositório e adicione o caminho até `/inst/` usando `addpath` na 
 sessão corrente do Octave.
 
 ### Requisitos
