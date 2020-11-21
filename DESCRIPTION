@@ -1,0 +1,11 @@
+Name: lftools
+Version: 0.0.1
+Date: 2020-11-20
+Author: Luis Paulo Lima <luis.p.lima@unesp.br>.
+Maintainer: Luis Paulo Lima <luis.p.lima@unesp.br>.
+Title: Labsin FEM Tools
+Description: A small package of functions for simulations using the Finite 
+ Element Method for Octave.
+Categories: finite element method, mechanical engineering
+Url: <https://github.com/luispauloml/lftools>
+License: GPLv3+
