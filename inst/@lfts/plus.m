@@ -30,7 +30,7 @@ function so = plus (s1, s2)
     m_tmp = M0;
     
     for j = 1 : 2
-      mi = get (si{j}. matrizes{i});
+      mi = get (si{j}, matrizes{i});
       
       if ~isempty(mi)
           m_tmp(gdls{j}, gdls{j}) = m_tmp(gdls{j}, gdls{j}) + mi;
