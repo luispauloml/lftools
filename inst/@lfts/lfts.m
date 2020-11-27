@@ -1,4 +1,4 @@
-classdef lftstruct
+classdef lfts
   properties (Access = private)
     massa
     amortecimento
@@ -8,14 +8,14 @@ classdef lftstruct
   end
 
   methods
-    function s = lftstruct(varargin)
+    function s = lfts(varargin)
       %% Estrutura vazia
       s.massa         = [];
       s.amortecimento = [];
       s.rigidez       = [];
       s.gdls          = [];
       s.nGDLs         = 0;
-      %s = class(s, 'lftstruct');
+      %s = class(s, 'lfts');
       
       if nargin == 0
         %% Retornar estrutura vazia
@@ -23,7 +23,7 @@ classdef lftstruct
         
       elseif nargin > 3
         %% Limita o número de entradas
-        error('lftstruct: apenas 3 entradas são aceitas');
+        error('lfts: apenas 3 entradas são aceitas');
         
       else
         %% Percorrer argumentos
@@ -32,13 +32,13 @@ classdef lftstruct
           %% Verifica e a entrada é matriz
           matriz = varargin{i};
           if ~isa (matriz, 'double')
-            error ('lftstruct: todas as entradas devem ser matrizes');
+            error ('lfts: todas as entradas devem ser matrizes');
           end
           
           %% Verifica se é quadrada
           tamanho = size (matriz);
           if tamanho(1) ~= tamanho(2)
-            error ('lftstruct: todas as entradas devem ser quadradas');
+            error ('lfts: todas as entradas devem ser quadradas');
           end
           
           %% Compara com as entradas anterior
@@ -46,7 +46,7 @@ classdef lftstruct
             s.nGDLs = tamanho(1);    % Armazena a ordem se for a primeira entrada
           else
             if s.nGDLs ~= tamanho(1) % Compara com as demais
-              error ('lftstruct: todas as entradas devem ter o mesmo tamanho');
+              error ('lfts: todas as entradas devem ter o mesmo tamanho');
             end%if
           end%if
           

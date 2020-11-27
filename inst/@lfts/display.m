@@ -1,5 +1,5 @@
 function display (s)
-  printf ('%s = <objeto ''lftstruct''>\n', inputname (1));
+  printf ('%s = <objeto ''lfts''>\n', inputname (1));
   
   campos = {'massa', 'amortecimento', 'rigidez', 'gdls'};
   

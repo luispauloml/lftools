@@ -17,5 +17,5 @@ function so = uminus (si)
     end
   end
   
-  so = lftstruct (mo{:});
+  so = lfts (mo{:});
   so = set (so, 'gdls', get (si, 'gdls'));

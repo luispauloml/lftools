@@ -9,7 +9,7 @@ function v = subsref (val, idxin)
   
   %% Verifica se usa notação de ponto
   if ~isequal (idx.type{1}, '.')
-    error('subsref: lftstruct só pode ser indexada com '',''');
+    error('subsref: lfts só pode ser indexada com '',''');
   end
   
   %% Verifica se são campos permitidos

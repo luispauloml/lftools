@@ -1,7 +1,7 @@
 function so = plus (s1, s2)
   %% Verifica a classe dos operandos
-  if ~isa (s1, 'lftstruct') || ~isa (s2, 'lftstruct')
-    error('adição e subtração implementadas apenas para operações entre ''lftstruct''');
+  if ~isa (s1, 'lfts') || ~isa (s2, 'lfts')
+    error('adição e subtração implementadas apenas para operações entre ''lfts''');
   end
 
   %% Verifica se alguma das estruturas está vazia
@@ -42,4 +42,4 @@ function so = plus (s1, s2)
     end
   end
   
-  so = lftstruct(mo{:});
+  so = lfts(mo{:});

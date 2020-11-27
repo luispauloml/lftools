@@ -31,4 +31,4 @@ function so = expandir (si)
   end
   
   %% Criando nova estrutura
-  so = lftstruct(mo{:});
+  so = lfts(mo{:});
