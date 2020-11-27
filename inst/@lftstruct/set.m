@@ -2,7 +2,9 @@ function s = set (s,varargin)
 
   %% Verifica a quantidade de entradas
   npares = numel (varargin);
-  if mod (npares, 2) ~= 0
+  if npares == 0
+    return;
+  elseif mod (npares, 2) ~= 0
     error('set: são esperados pares PROP e VALOR');
   end
   npares = npares / 2;

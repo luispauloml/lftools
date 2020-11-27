@@ -7,7 +7,7 @@ function [p, varargout] = size (s, varargin)
   
   if nargin == 2
     dim = varargin{1};
-    if fix (dim) ~= dim
+    if fix (dim(1)) ~= dim(1)
       error('size: DIM deve ser um valor inteiro');
     end
     
@@ -19,7 +19,11 @@ function [p, varargout] = size (s, varargin)
       p = n;
       return;
     else
-      p = 1;
+      if n == 0
+        p = 0;
+      else
+        p = 1;
+      end
       return;
     end
   end
@@ -31,6 +35,10 @@ function [p, varargout] = size (s, varargin)
     p = n;
     varargout{1} = n;
     for i = 2 : nargout - 1
-      varargout{i} = 1;
+      if n == 0
+        varargout{i} = 0;
+      else
+        varargout{i} = 1;
+      end
     end
   end

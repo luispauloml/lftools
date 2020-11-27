@@ -1,5 +1,4 @@
 function s = ctranspose (s)
-  s.massa = s.massa';
+  s.massa         = s.massa';
   s.amortecimento = s.amortecimento';
-  s.rigidez = s.rigidez';
-end%function
+  s.rigidez       = s.rigidez';

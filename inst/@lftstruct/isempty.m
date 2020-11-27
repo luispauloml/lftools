@@ -1,3 +1,3 @@
 function b = isempty (s)
-  b = hasMassa (s) || hasAmortecimento (s) || hasRigidez (s);
-  b = ~b;
+  b = isempty (s.massa) && isempty (s.amortecimento) && isempty (s.rigidez);
+
