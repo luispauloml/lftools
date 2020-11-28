@@ -1,6 +1,7 @@
 function s = expandir (s)
   %% Verifica se já está expandida ou se é vazia
-  if isequal (s.gdls, sort(s.gdls), 1:s.nGDLs) || isempty (s)
+  newGDLs = 1 : s.nGDLs;
+  if isequal (s.gdls, sort(s.gdls), newGDLs) || isempty (s)
     return;
   end
   
@@ -18,4 +19,4 @@ function s = expandir (s)
     end
   end
   
-  s.gdls = 1 : nGDLs;
+  s.gdls = newGDLs;
