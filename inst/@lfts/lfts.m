@@ -163,4 +163,9 @@ classdef lfts
     end%function
     
   end%methods
+  
+  methods (Access = private)
+    so = expandir (si);
+    c  = camposVazios (s);
+  end%methods
 end%classdef

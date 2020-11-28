@@ -1,4 +1,4 @@
-function [v,varargout] = get (s, varargin)
+function [varargout] = get (s, varargin)
   if nargin < 2
     error(['get: espera-se pelo menos uma PROPRIEDADE da estrutura; '...
           ,'os valores possíveis são ''massa'', ''amortecimento'', '...
@@ -21,6 +21,3 @@ function [v,varargout] = get (s, varargin)
       error('get: propriedades inválida');
     end%if
   end%for
-  
-  v          = varargout{1};
-  varargout  = varargout(2:end);
